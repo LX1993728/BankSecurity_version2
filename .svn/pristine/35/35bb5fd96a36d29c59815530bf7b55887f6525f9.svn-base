@@ -1,0 +1,708 @@
+.page {
+    width: 1340px;
+    height: 768px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.page .header {
+    width: 1340px;
+    height: 56px;
+    background-color: #569ff1;
+}
+
+.page .header .title {
+    width: 1171px;
+    height: 56px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 12px;
+}
+
+.bank .icon_logo {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-top: 13px;
+    margin-right: 8px;
+    background: url(../image/icon_logo.png) no-repeat;
+}
+
+.page .header .title h1 {
+    width: 400px;
+    height: 56px;
+    line-height: 56px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+}
+
+.page .header .userName {
+    width: 94px;
+    height: 56px;
+}
+
+.page .header .userName a {
+    width: 94px;
+    height: 56px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+
+.bank .icon_user {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: 18px;
+    background: url(../image/icon_user.png) no-repeat;
+}
+
+.page .header .userName span {
+    width: 74px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.page .header .logOut {
+    width: 62px;
+    height: 56px;
+    border-left: 1px solid #4682c5;
+    box-sizing: border-box;
+}
+
+.page .header .logOut a {
+    width: 42px;
+    height: 56px;
+    display: block;
+    line-height: 56px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/* 头部标题结束 */
+
+.bank .body {
+    width: 1340px;
+    height: 712px;
+}
+
+.bank .body .nav {
+    width: 190px;
+    height: 712px;
+    background-color: #3b4a60;
+}
+
+.bank .body .nav .nav-box {
+    width: 190px;
+    height: 712px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bank .body .nav .nav-box ul {
+    width: 190px;
+    height: 702px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.bank .body .nav .nav-box ul li {
+    width: 190px;
+    height: 56px;
+    zoom: 1;
+    padding-left: 36px;
+}
+
+.bank .body .nav .nav-box ul li.active {
+    border-left: 4px solid #569ff1;
+    width: 150px;
+    background-color: #303b50;
+}
+
+.bank .body .nav .nav-box ul li:hover {
+    border-left: 4px solid #569ff1;
+    width: 150px;
+    background-color: #303b50;
+    cursor: pointer;
+}
+
+.bank .body .nav .nav-box ul li:after {
+    display: block;
+    content: '';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.bank .body .nav .nav-box ul li:last-child {
+    width: 146px;
+    height: 1px;
+    border-top: 1px solid #535e71;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.bank .body .nav .nav-box ul li i {
+    float: left;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: 18px;
+}
+
+.bank .icon_manage {
+    background: url(../image/icon_manage.png) no-repeat;
+}
+
+.bank .icon_add {
+    background: url(../image/icon_add.png) no-repeat;
+}
+
+
+.bank .body .nav .nav-box ul li span {
+    float: left;
+    font-size: 17px;
+    color: #b0bec5;
+    display: block;
+    width: 108px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* 导航条结束 */
+
+.bank .body .content {
+    width: 1150px;
+    /*height: 712px;*/
+}
+
+.bank .body .content .manageContent {
+    width: 1130px;
+    height: 404px;
+    margin-top: 15px;
+    margin-left: 20px;
+    border: 1px solid #b0bec5;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.bank .body .content .manageContent .header {
+    width: 1130px;
+    height: 55px;
+    border-bottom: 1px solid #b0bec5;
+    background-color: #fff;
+}
+
+.bank .body .content .manageContent .header span {
+    display: block;
+    float: right;
+    width: 74px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 20px;
+    color: #8292a9;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+.bank .body .content .manageContent .header span:first-child {
+    width: 134px;
+    float: left;
+    border: none;
+}
+
+.bank .body .content .manageContent .header span:nth-child(2) {
+    width: 770px;
+    float: left;
+    border: none;
+}
+
+.bank .body .content .manageContent .body {
+    width: 1130px;
+    height: 642px;
+}
+
+.bank .body .content .manageContent .body ul {
+    width: 1130px;
+    height: 642px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bank .body .content .manageContent .body ul li {
+    width: 1130px;
+    height: 57px;
+    border-bottom: 1px solid #b0bec5;
+    zoom: 1;
+}
+
+.bank .body .content .manageContent .body ul li:after {
+    display: block;
+    content: '';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.bank .body .content .manageContent .body ul li span {
+    display: block;
+    float: right;
+    width: 73px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 20px;
+    color: #8292a9;
+    text-align: center;
+    border-left: 1px solid #b0bec5;
+}
+
+.bank .body .content .manageContent .body ul li span:first-child {
+    width: 134px;
+    border: none;
+    float: left;
+    text-align: left;
+    padding-left: 26px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-right: 1px solid #b0bec5;
+}
+
+.bank .body .content .manageContent .body ul li span:nth-child(2) {
+    width: 770px;
+    border: none;
+    float: left;
+    text-align: left;
+    padding-left: 26px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bank .icon_look {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url(../image/icon_look.png) no-repeat;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.bank .icon_look:hover {
+    cursor: pointer;
+}
+
+.bank .notpass .icon_delete {
+    width: 22px;
+    height: 22px;
+    display: block;
+    background: url(../image/icon_delete.png) no-repeat;
+    margin-top: 16px;
+    margin-left: 25px;
+}
+
+.bank .icon_delete:hover {
+    cursor: pointer;
+}
+
+.bank .body .content .manageContent .body ul li span.pass {
+    color: #64e172;
+}
+
+.bank .body .content .manageContent .body ul li span.notpass {
+    color: #eb6262;
+}
+
+
+
+
+
+
+/* 弹窗 */
+
+.bank .body .content .manageContent .manageContentPage {
+    width: 420px;
+    height: 260px;
+    border: 1px solid #7291b4;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px #d2d2d2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -210px;
+    margin-top: -130px;
+    background-color: #fff;
+}
+
+.bank .body .content .manageContent .manageContentPage .title {
+    width: 420px;
+    height: 48px;
+    background-color: #7ea4cf;
+}
+
+.bank .icon_close {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(../image/icon_close.png) no-repeat;
+    margin-top: 9px;
+    margin-right: 14px;
+}
+
+.bank .icon_close:hover {
+    cursor: pointer;
+}
+
+.bank .body .content .manageContent .manageContentPage .view {
+    width: 420px;
+    height: 212px;
+    box-sizing: border-box;
+}
+
+.bank .body .content .manageContent .manageContentPage .view iframe {
+    width: 420px;
+    height: 212px;
+}
+
+
+/* 添加 */
+
+.bank .body .content .addContent {
+    width: 1150px;
+    /*height: 712px;*/
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #eceef2;
+}
+
+.bank .body .content .addContent .title {
+    width: 1130px;
+    height: 51px;
+    line-height: 51px;
+    border-bottom: 1px solid #dae4e8;
+    font-size: 20px;
+    color: #8f99a8;
+    text-align: left;
+    background-color: #fff;
+    padding-left: 20px;
+}
+
+.bank .body .content .addContent .content {
+    width: 1130px;
+    /*height: 712px;*/
+}
+
+.bank .body .content .addContent .content .header {
+    background-color: #fff;
+    width: 1150px;
+    height: 94px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    padding-bottom: 14px;
+    padding-left: 20px;
+}
+
+.bank .body .content .addContent .content .header input {
+    width: 670px;
+    height: 60px;
+    border: 1px solid #6b7f9b;
+    font-size: 20px;
+    color: #253137;
+    text-indent: 1em;
+    box-sizing: border-box;
+}
+
+.bank .body .content .addContent .content .header a {
+    color: #5f6f87;
+    font-size: 20px;
+    width: 86px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.bank .body .content .addContent .content .header a:nth-child(4) {
+    background-color: #38d69c;
+    color: #fff;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.bank .body .content .addContent .content .header a:nth-child(5) {
+    border: 1px solid #6b7f9b;
+    box-sizing: border-box;
+}
+
+.bank .body .content .addContent .content .body {
+    width: 1130px;
+    height: 566px;
+}
+
+
+
+
+
+
+/* .bank .body .content .addContent .content .body .addContentInfo-show {
+    width: 362px;
+    height: 336px;
+    box-sizing:border-box;
+} */
+
+.bank .addContent .body .addContent-showInfo {
+    width: 360px;
+    height: 320px;
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+.bank .addContent .body .addContent-showInfo .title {
+    width: 360px;
+    height: 40px;
+    background-color: #81a3d5;
+    padding-left: 0;
+}
+
+.bank .addContent .body .addContent-showInfo .title h3 {
+    float: left;
+    display: block;
+    width: 65px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+.bank .addContent .body .addContent-showInfo .title a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: right;
+}
+
+.bank .icon_setting {
+    background: url(../image/icon_setting.png) no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.bank .addContent .body .addContent-showInfo .title i {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.bank .addContent .body .addContent-showInfo .list {
+    width: 348px;
+    height: 268px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.bank .addContent .body .addContent-showInfo .list ul {
+    width: 348px;
+    height: 268px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bank .addContent .body .addContent-showInfo .list ul li {
+    width: 348px;
+    height: 60px;
+    border-bottom: 1px solid #dae4e8;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.bank .addContent .body .addContent-showInfo .list .listImg {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}
+
+.bank .addContent .body .addContent-showInfo .list .listInfo {
+    width: 258px;
+    height: 24px;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTitle {
+    width: 258px;
+    height: 24px;
+    font-size: 0;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTitle span {
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #050505;
+    display: inline-block;
+    float: left;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTitle span:hover {
+    cursor: pointer;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTitle span:first-child {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTitle span:last-child {
+    width: 162px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTime {
+    width: 258px;
+    height: 24px;
+    font-size: 0;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTime span {
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #050505;
+    display: inline-block;
+    float: left;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTime span:first-child {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.bank .addContent .body .addContent-showInfo .list .infoTime span:last-child {
+    width: 162px;
+}
+
+.bank_delete {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -130px;
+    width: 420px;
+    height: 260px;
+    background: #fff;
+    border: 1px solid #6f8eb2;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px #888888;
+    z-index: 99;
+    display: none;
+}
+
+.bank_delete_title {
+    width: 100%;
+    height: 46px;
+    background: #445670;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 46px;
+    color: #fff;
+}
+
+.bank_delete_text {
+    width: 100%;
+    height: 146px;
+    box-sizing: border-box;
+}
+
+.bank_textP1 {
+    color: #445670;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.bank_textP2 {
+    color: #a3adb8;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 22px;
+}
+
+.bank_delete_btn {
+    width: 90px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.bank_btnConfirm,
+.security_btnConfirm {
+    background: #569ff1;
+    color: #fff;
+    float: left;
+    margin-left: 95px;
+}
+
+.bank_btnCancel,
+.security_btnCancel {
+    background: #fff;
+    border: 1px solid #6f8eb2;
+    color: #6f8eb2;
+    float: right;
+    margin-right: 95px;
+}
+
+.bank_security_list {
+    width: 348px;
+    height: 268px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.bank_security_list ul>li {
+    width: 348px;
+    height: 60px;
+    border-bottom: 1px solid #dae4e8;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.bank_select {
+    width: 130px;
+    height: 60px;
+    border: 1px solid #6b7f9b;
+    font-size: 20px;
+    color: #253137;
+    text-indent: 1em;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 4px;
+}

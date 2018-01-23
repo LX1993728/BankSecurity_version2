@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>券商管理</title>
+    <link rel="stylesheet" href="./css/css_reset.css">
+    <link rel="stylesheet" href="./css/bank_security.css">
+    <link rel="stylesheet" href="./css/security.css">
+</head>
+
+<body>
+    <div class="page security bind approval">
+        <!-- 头部标题 -->
+        <div class="header clearfix">
+            <div class="title fl clearfix">
+                <i class="icon_logo fl"></i>
+                <h1 class="fl">证讯业务开发互联平台</h1>
+            </div>
+            <div class="userName fl">
+                <a href="jacascript:;" class="clearfix">
+					<i class='icon_user fl'></i>
+					<span class="fl">admin</span>
+				</a>
+            </div>
+            <div class="logOut fr"><a href="login.html">退出</a></div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="body clearfix">
+            <!-- 导航条 -->
+            <div class="nav fl">
+                <div class="nav-box">
+                    <ul id="nav-box">
+                        <li class="active">
+                            <a href="security.html">
+                            <i class="icon_manage"></i>
+                            <span>券商管理</span> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_examine.html">
+                            <i class="icon_approval"></i>
+                            <span>证讯审批</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_bind.html">
+                            <i class="icon_bind"></i>
+                            <span>证讯绑定</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_type.html">
+                            <i class="icon_type"></i>
+                            <span>证讯类型</span>
+                            </a>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 详细信息列表 -->
+            <!-- 管理 -->
+            <div class="securityContent fl">
+                <div class="title">
+                    <div class="name fl clearfix">
+                        <span>名称</span>
+                        <input type="text">
+                    </div>
+                    <div class="search fl">
+                        <a href="javascript:;">查询</a>
+                    </div>
+                </div>
+                <div class="conter">
+                    <div class="title">
+                        <h3>券商信息</h3>
+                    </div>
+                    <div class="list">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 1.png" height="45" width="49" alt="">
+                                    </td>
+                                    <td>
+                                        <span>东北证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding" onclick="changeType(this)">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 2.png" height="46" width="62" alt="">
+                                    </td>
+                                    <td>
+                                        <span>中信投建</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 3.png" height="47" width="90" alt="">
+                                    </td>
+                                    <td>
+                                        <span>长城证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 4.png" height="48" width="80" alt="">
+                                    </td>
+                                    <td>
+                                        <span>西南证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 5.png" height="48" width="80" alt="">
+                                    </td>
+                                    <td>
+                                        <span>开源证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 6.png" height="29" width="74" alt="">
+                                    </td>
+                                    <td>
+                                        <span>国泰君安证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 7.png" height="34" width="94" alt="">
+                                    </td>
+                                    <td>
+                                        <span>中信投建</span>
+                                    </td>
+                                    <td>
+                                        <span class="undercarriage">下架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="grounding security_ground security_change">上架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 8.png" height="32" width="86" alt="">
+                                    </td>
+                                    <td>
+                                        <span>国泰君安证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 1.png" height="45" width="49" alt="">
+                                    </td>
+                                    <td>
+                                        <span>国泰君安证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="brokerLogo">
+                                        <img src="./image/图层 2.png" height="46" width="62" alt="">
+                                    </td>
+                                    <td>
+                                        <span>国泰君安证券</span>
+                                    </td>
+                                    <td>
+                                        <span class="grounding">上架</span>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;" class="undercarriage security_listunder security_change">下架</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 上架/下架提示信息框 -->
+        <div class="bank_delete">
+            <div class="bank_delete_title">
+                提示信息
+            </div>
+            <div class="bank_delete_text">
+                <p class="bank_textP1">是否下架本条券商信息?</p>
+                <p class="bank_textP2">下架点击确定，或者点击取消</p>
+            </div>
+            <div class="bank_delete_btn bank_btnConfirm">确认</div>
+            <div class="bank_delete_btn bank_btnCancel">取消</div>
+        </div>
+        
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/security.js"></script>
+    <script src="./js/security_examine.js"></script>
+</body>
+
+</html>

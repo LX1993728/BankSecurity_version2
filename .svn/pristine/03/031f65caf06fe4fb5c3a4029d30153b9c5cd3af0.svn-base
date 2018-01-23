@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>证讯审批</title>
+    <link rel="stylesheet" href="./css/css_reset.css">
+    <link rel="stylesheet" href="./css/bank_security.css">
+    <link rel="stylesheet" href="./css/security.css">
+</head>
+
+<body>
+    <div class="page security bind approval examine">
+        <!-- 头部标题 -->
+        <div class="header clearfix">
+            <div class="title fl clearfix">
+                <i class="icon_logo fl"></i>
+                <h1 class="fl">证讯业务开发互联平台</h1>
+            </div>
+            <div class="userName fl">
+                <a href="jacascript:;" class="clearfix">
+                    <i class='icon_user fl'></i>
+                    <span class="fl">admin</span>
+                </a>
+            </div>
+            <div class="logOut fr"><a href="login.html">退出</a></div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="body clearfix">
+            <!-- 导航条 -->
+            <div class="nav fl">
+                <div class="nav-box">
+                    <ul id="nav-box">
+                        <li>
+                            <a href="security.html">
+                            <i class="icon_manage"></i>
+                            <span>券商管理</span> 
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="securities_examine.html">
+                            <i class="icon_approval"></i>
+                            <span>证讯审批</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_bind.html">
+                            <i class="icon_bind"></i>
+                            <span>证讯绑定</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_type.html">
+                            <i class="icon_type"></i>
+                            <span>证讯类型</span>
+                            </a>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 详细信息列表 -->
+            <!-- 审批 -->
+            <div class="approvalContent fl">
+                <div class="list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>券商列表</td>
+                                <td>证讯类型</td>
+                                <td>查看</td>
+                                <td>状态</td>
+                                <td>设置</td>
+                            </tr>
+                        </thead>
+                        <tbody id="approvalContentList">
+                            <tr>
+                                <td class="active">
+                                    <span>东北证券</span>
+                                </td>
+                                <td>
+                                    <span>自选股</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>中信投建</span>
+                                </td>
+                                <td>
+                                    <span>基本行情</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>长城证券</span>
+                                </td>
+                                <td>
+                                    <span>盯盘小秘书</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>西南证券</span>
+                                </td>
+                                <td>
+                                    <span>股票助手</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>开源证券</span>
+                                </td>
+                                <td>
+                                    <span>每日点评</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>国泰君安证券</span>
+                                </td>
+                                <td>
+                                    <span>研究报告</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>中信投建</span>
+                                </td>
+                                <td>
+                                    <span>指数</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>国泰君安证券</span>
+                                </td>
+                                <td>
+                                    <span>个股分析</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>国泰君安证券</span>
+                                </td>
+                                <td>
+                                    <span>券商理财</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>国泰君安证券</span>
+                                </td>
+                                <td>
+                                    <span>投资学院</span>
+                                </td>
+                                <td>
+                                    <a href="javacsript:;">
+                                        <i class="icon_look"></i>
+                                    </a>
+                                </td>
+                                <td>待审批</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript:;" class="security_pass">通过</a>
+                                        <a href="javascript:;" class="security_failed">不通过</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 审批弹窗 -->
+                <div class="windowPage addShowInfo" id="windowPage" style="display: none;">
+                    <div class="header clearfix">
+                        <i class="icon_close"></i>
+                    </div>
+                    <div class="windowPageBg">
+                        <div class="bank_security_list">
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="listImg fl">
+                                        <img src="./image/img1.png" height="48" width="48" alt="">
+                                    </div>
+                                    <div class="listInfo fl">
+                                        <div class="infoTitle clearfix">
+                                            <span>【行业报告】</span>
+                                            <span>机械设备行业动态报告机械设备</span>
+                                        </div>
+                                        <div class="infoTime clearfix">
+                                            <span>2017-11-07</span>
+                                            <span>10:03</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="listImg fl">
+                                        <img src="./image/img2.png" height="48" width="48" alt="">
+                                    </div>
+                                    <div class="listInfo fl">
+                                        <div class="infoTitle clearfix">
+                                            <span>【行业报告】</span>
+                                            <span>机械设备行业动态报告机械设备</span>
+                                        </div>
+                                        <div class="infoTime clearfix">
+                                            <span>2017-11-07</span>
+                                            <span>10:03</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="listImg fl">
+                                        <img src="./image/img3.png" height="48" width="48" alt="">
+                                    </div>
+                                    <div class="listInfo fl">
+                                        <div class="infoTitle clearfix">
+                                            <span>【行业报告】</span>
+                                            <span>机械设备行业动态报告机械设备</span>
+                                        </div>
+                                        <div class="infoTime clearfix">
+                                            <span>2017-11-07</span>
+                                            <span>10:03</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="listImg fl">
+                                        <img src="./image/img4.png" height="48" width="48" alt="">
+                                    </div>
+                                    <div class="listInfo fl">
+                                        <div class="infoTitle clearfix">
+                                            <span>【行业报告】</span>
+                                            <span>机械设备行业动态报告机械设备</span>
+                                        </div>
+                                        <div class="infoTime clearfix">
+                                            <span>2017-11-07</span>
+                                            <span>10:03</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 通过/不通过提示信息框 -->
+            <div class="bank_delete">
+                <div class="bank_delete_title">
+                    提示信息
+                </div>
+                <div class="bank_delete_text">
+                    <p class="bank_textP1">是否通过本条券商信息?</p>
+                    <p class="bank_textP2">通过点击确定，或者点击取消</p>
+                </div>
+                <div class="bank_delete_btn security_btnConfirm">确认</div>
+                <div class="bank_delete_btn security_btnCancel">取消</div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/security.js"></script>
+</body>
+
+</html>

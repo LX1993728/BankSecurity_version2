@@ -1,0 +1,173 @@
+.page {
+	width: 1340px;
+	height: 768px;
+}
+
+.logoin {
+	background: url(../image/bgImg.png) no-repeat;
+}
+
+.logoin .title {
+	width: 810px;
+	height: 620px;
+	line-height: 620px;
+	font-size: 60px;
+	color: #fff;
+	text-align: center;
+}
+
+.logoin .content {
+	width: 530px;
+	height: 768px;
+	box-sizing:border-box;
+}
+
+.logoin .content .logoinBox {
+	width: 432px;
+	height: 418px;
+	border-radius: 6px;
+	background-color: #29507d;
+	overflow: hidden;
+	margin-top: 144px;
+	margin-left: 32px;
+}
+
+.logoin .content .logoinBox .header {
+	width: 432px;
+	height: 140px;
+	line-height: 140px;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+}
+
+.logoin .content .logoinBox .body {
+	width: 432px;
+	height: 122px;
+	box-sizing:border-box;
+}
+
+.logoin .content .logoinBox .body .userName {
+	width: 376px;
+	height: 50px;
+	margin-bottom: 22px;
+	margin-left: 28px;
+	position: relative;
+}
+
+.logoin .content .logoinBox .body .password {
+	width: 376px;
+	height: 50px;
+	margin-left: 28px;
+	position: relative;
+}
+
+.logoin .content .logoinBox .body span {
+	position: absolute;
+	top: 6px;
+	left: 7px;
+	width: 38px;
+	height: 38px;
+	display: block;
+	border-right: 1px solid #c5c5c5;
+}
+
+.logoin .content .logoinBox .body span i {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: 9px;
+	margin-left: 9px;
+}
+
+.logoin .icon_user {
+	background: url(../image/icon_user.png) no-repeat;
+}
+
+.logoin .icon_password {
+	background: url(../image/icon_password.png) no-repeat;
+}
+
+.logoin .content .logoinBox .body input {
+	width: 374px;
+	height: 48px;
+	line-height: 48px;
+	border: 1px solid #c5c5c5;
+	padding-left: 64px;
+	box-sizing:border-box;
+	font-size: 18px;
+	color: #ccc;
+	background-color: #ffffff;
+}
+
+    .logoin .content .logoinBox .body input::-webkit-input-placeholder { color:#ccc;font-size:16px;
+　　}
+	.logoin .content .logoinBox .body input:-moz-placeholder {color:#ccc;font-size:16px;
+　　}
+	.logoin .content .logoinBox .body input::-moz-placeholder {color:#ccc;font-size:16px;
+　　}
+	.logoin .content .logoinBox .body input:-ms-input-placeholder {color:#ccc;font-size:16px;
+	}
+
+.logoin .content .logoinBox .footer {
+	width: 432px;
+	height: 142px;
+}
+
+.logoin .content .logoinBox .footer .userChecked {
+	width: 434px;
+	height: 40px;
+	padding-left: 28px;
+	padding-top: 12px;
+	box-sizing:border-box;
+}
+
+.logoin .content .logoinBox .footer .userChecked span {
+	float: left;
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.logoin .content .logoinBox .footer .userChecked span:first-child {
+	width: 16px;
+	background-color: #fff;
+	margin-right: 16px;
+}
+
+.logoin .content .logoinBox .footer .userChecked span:first-child:hover {
+	cursor: pointer;
+}
+
+.logoin .content .logoinBox .footer .userChecked span.active {
+	background-color: #42e69b;
+}
+
+.logoin .content .logoinBox .footer .userChecked span:last-child {
+	float: right;
+	margin-right: 32px;
+}
+
+.logoin .content .logoinBox .footer .userChecked span:last-child:hover {
+	cursor: pointer;
+}
+
+.logoin .content .logoinBox .footer .logoinBtn {
+	width: 432px;
+	height: 102px;
+}
+
+.logoin .content .logoinBox .footer .logoinBtn a {
+	display: block;
+	width: 376px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin-top: 26px;
+	margin-left: 28px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #257fe4;
+}

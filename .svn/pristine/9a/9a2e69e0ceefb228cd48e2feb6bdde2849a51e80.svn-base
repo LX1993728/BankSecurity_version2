@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>证讯管理</title>
+    <link rel="stylesheet" href="./css/css_reset.css">
+    <link rel="stylesheet" href="./css/bank_security.css">
+</head>
+
+<body>
+    <div class="page bank">
+        <!-- 头部标题 -->
+        <div class="header clearfix">
+            <div class="title fl clearfix">
+                <i class="icon_logo fl"></i>
+                <h1 class="fl">证讯业务开发互联平台</h1>
+            </div>
+            <div class="userName fl">
+                <a href="jacascript:;" class="clearfix">
+                    <i class='icon_user fl'></i>
+                    <span class="fl">admin</span>
+                </a>
+            </div>
+            <div class="logOut fr"><a href="login.html">退出</a></div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="body clearfix">
+            <!-- 导航条 -->
+            <div class="nav fl">
+                <div class="nav-box">
+                    <ul id="nav-box">
+                        <li>
+                            <a href="bank_security.html">
+                            <i class="icon_manage"></i>
+                            <span>证讯管理</span>
+                            </a>
+                        </li>
+                        <!-- <li class="active">
+                            <a href="bank_security_add.html">
+                            <i class="icon_add"></i>
+                            <span>证讯添加</span>
+                            </a>
+                        </li> -->
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content content1 fl clearfix">
+                <!-- 添加 -->
+                <div class="addContent fl">
+                    <div class="title">证讯添加</div>
+                    <div class="content">
+                        <div class="header">
+                            <select name="" id="" class="bank_select">
+                                <option value="">证讯1</option>
+                                <option value="">证讯2</option>
+                                <option value="">证讯3</option>
+                                <option value="">证讯4</option>
+                                <option value="">证讯5</option>
+                                <option value="">证讯6</option>
+                            </select>
+                            <input type="text" value="http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161">
+                            <a href="javascript:;" id="addContent-save">查看</a>
+                            <a href="bank_security.html">保存</a>
+                            <a href="bank_security.html">取消</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 管理 -->
+                <div class="manageContent fl">
+                    <div class="header">
+                        <span>证讯类型</span>
+                        <span>我的证讯</span>
+                        <span>操作</span>
+                        <span>状态</span>
+                        <span>查看</span>
+                    </div>
+                    <div class="body">
+                        <ul id="infoLook">
+                            <li>
+                                <span>证讯1</span>
+                                <span>http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161</span>
+                                <span>
+                                    <i class="icon_delete"></i>
+                                </span>
+                                <span class="pass">通过</span>
+                                <span>
+                                    <i class="icon_look"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>证讯2</span>
+                                <span>http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161</span>
+                                <span class="notpass">
+                                    <i class="icon_delete"></i>
+                                </span>
+                                <span class="notpass">未通过</span>
+                                <span>
+                                    <i class="icon_look"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>证讯3</span>
+                                <span>http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161</span>
+                                <span>
+                                    <i class="icon_delete"></i>
+                                </span>
+                                <span class="pass">通过</span>
+                                <span>
+                                    <i class="icon_look"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>证讯4</span>
+                                <span>http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161</span>
+                                <span>
+                                    <i class="icon_delete"></i>
+                                </span>
+                                <span class="pass">通过</span>
+                                <span>
+                                    <i class="icon_look"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>证讯5</span>
+                                <span>http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161</span>
+                                <span>
+                                    <i class="icon_delete"></i>
+                                </span>
+                                <span class="pass">通过</span>
+                                <span>
+                                    <i class="icon_look"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>证讯6</span>
+                                <span>http://192.168.1.140:8081/AnalyzeDataV/lod46-9239-d0c3f689f161</span>
+                                <span>
+                                    <i class="icon_delete"></i>
+                                </span>
+                                <span class="pass">通过</span>
+                                <span>
+                                    <i class="icon_look"></i>
+                                </span>
+                        </ul>
+                    </div>
+                    <div class="manageContentPage" style="display:none">
+                        <div class="title clearfix">
+                            <i class="icon_close fr"></i>
+                        </div>
+                        <div class="view">
+                            <div class="bank_security_list">
+                                <ul>
+                                    <li class="clearfix">
+                                        <div class="listImg fl">
+                                            <img src="./image/img1.png" height="48" width="48" alt="">
+                                        </div>
+                                        <div class="listInfo fl">
+                                            <div class="infoTitle clearfix">
+                                                <span>【行业报告】</span>
+                                                <span>机械设备行业动态报告机械设备</span>
+                                            </div>
+                                            <div class="infoTime clearfix">
+                                                <span>2017-11-07</span>
+                                                <span>10:03</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="listImg fl">
+                                            <img src="./image/img2.png" height="48" width="48" alt="">
+                                        </div>
+                                        <div class="listInfo fl">
+                                            <div class="infoTitle clearfix">
+                                                <span>【行业报告】</span>
+                                                <span>机械设备行业动态报告机械设备</span>
+                                            </div>
+                                            <div class="infoTime clearfix">
+                                                <span>2017-11-07</span>
+                                                <span>10:03</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="listImg fl">
+                                            <img src="./image/img3.png" height="48" width="48" alt="">
+                                        </div>
+                                        <div class="listInfo fl">
+                                            <div class="infoTitle clearfix">
+                                                <span>【行业报告】</span>
+                                                <span>机械设备行业动态报告机械设备</span>
+                                            </div>
+                                            <div class="infoTime clearfix">
+                                                <span>2017-11-07</span>
+                                                <span>10:03</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="listImg fl">
+                                            <img src="./image/img4.png" height="48" width="48" alt="">
+                                        </div>
+                                        <div class="listInfo fl">
+                                            <div class="infoTitle clearfix">
+                                                <span>【行业报告】</span>
+                                                <span>机械设备行业动态报告机械设备</span>
+                                            </div>
+                                            <div class="infoTime clearfix">
+                                                <span>2017-11-07</span>
+                                                <span>10:03</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 删除提示信息框 -->
+                <div class="bank_delete">
+                    <div class="bank_delete_title">
+                        提示信息
+                    </div>
+                    <div class="bank_delete_text">
+                        <p class="bank_textP1">是否删除本条证讯信息?</p>
+                        <p class="bank_textP2">删除点击确定，或者点击取消</p>
+                    </div>
+                    <div class="bank_delete_btn bank_btnConfirm">确认</div>
+                    <div class="bank_delete_btn bank_btnCancel">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bank_security.js"></script>
+</body>
+
+</html>

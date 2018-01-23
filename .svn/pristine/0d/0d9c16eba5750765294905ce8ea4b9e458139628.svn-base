@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>证讯类型</title>
+    <link rel="stylesheet" href="./css/css_reset.css">
+    <link rel="stylesheet" href="./css/bank_security.css">
+    <link rel="stylesheet" href="./css/security.css">
+    <link rel="stylesheet" href="./css/securities_type.css">
+</head>
+
+<body>
+    <div class="page security bind approval">
+        <!-- 头部标题 -->
+        <div class="header clearfix">
+            <div class="title fl clearfix">
+                <i class="icon_logo fl"></i>
+                <h1 class="fl">证讯业务开发互联平台</h1>
+            </div>
+            <div class="userName fl">
+                <a href="jacascript:;" class="clearfix">
+                    <i class='icon_user fl'></i>
+                    <span class="fl">admin</span>
+                </a>
+            </div>
+            <div class="logOut fr"><a href="login.html">退出</a></div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="body clearfix">
+            <!-- 导航条 -->
+            <div class="nav fl">
+                <div class="nav-box">
+                    <ul id="nav-box">
+                        <li>
+                            <a href="security.html">
+                            <i class="icon_manage"></i>
+                            <span>券商管理</span> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_examine.html">
+                            <i class="icon_approval"></i>
+                            <span>证讯审批</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="securities_bind.html">
+                            <i class="icon_bind"></i>
+                            <span>证讯绑定</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="securities_type.html">
+                            <i class="icon_type"></i>
+                            <span>证讯类型</span>
+                            </a>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 详细信息列表 -->
+            <div class="securities_type_title">
+                <div class="securities_type_titleName">
+                    类型添加
+                </div>
+                <input type="text" class="securities_type_add" placeholder="请输入类型名称">
+                <button class="btnType_add" id="btnTypeAdd">添加</button>
+                <button class="btnType_cancel" id="btnTypeCancel">取消</button>
+            </div>
+            <div class="securities_typeCut"></div>
+            <div class="securities_typeTable">
+                <table class="securities_type_table" border="1">
+                    <tr>
+                        <th>类型管理</th>
+                        <th colspan="2">操作</th>
+                    </tr>
+                    <tr>
+                        <td>自选股</td>
+                        <td><s class="typeIcon1"></s></td>
+                        <td><s class="typeIcon2"></s></td>
+                    </tr>
+                    <tr>
+                        <td>基本行情</td>
+                        <td><s class="typeIcon1"></s></td>
+                        <td><s class="typeIcon2"></s></td>
+                    </tr>
+                    <tr>
+                        <td>盯盘小秘书</td>
+                        <td><s class="typeIcon1"></s></td>
+                        <td><s class="typeIcon2"></s></td>
+                    </tr>
+                    <tr>
+                        <td>股票助手</td>
+                        <td><s class="typeIcon1"></s></td>
+                        <td><s class="typeIcon2"></s></td>
+                    </tr>
+                    <tr>
+                        <td>每日点评</td>
+                        <td><s class="typeIcon1"></s></td>
+                        <td><s class="typeIcon2"></s></td>
+                    </tr>
+                    <tr>
+                        <td>研究报告</td>
+                        <td><s class="typeIcon1"></s></td>
+                        <td><s class="typeIcon2"></s></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 类型提示信息框 -->
+        <div class="securities_typeRevise" style="display: none;">
+            <div class="securities_typeRevise_title">类型修改</div>
+            <input type="text" class="securities_typeRevise_input">
+            <button class="typeRevise_confirm">确定</button>
+            <button class="typeRevise_cancel">取消</button>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/security.js"></script>
+</body>
+
+</html>

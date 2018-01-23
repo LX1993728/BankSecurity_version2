@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/css_reset.css">
+	<link rel="stylesheet" href="./css/logoin.css">
+	<script type="text/javascript">
+	function toNext(){
+		name=$("#name").val();
+		if(name=="bank"){
+			window.location.href="security.html"
+		}
+		if(name=="broker"){
+			window.location.href="bank_security.html"
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="page logoin clearfix">
+		<div class="title fl">证讯业务开发互联平台</div>
+		<div class="content fl">
+			<div class="logoinBox">
+				<div class="header">
+					证讯业务开发互联平台
+				</div>
+				<div class="body">
+					<div class="userName clearfix">
+						<span><i class="icon_user"></i></span>
+						<input type="text" placeholder="请输入登录账号" id="name">
+					</div>
+					<div class="password clearfix">
+						<span><i class="icon_password"></i></span>
+						<input type="password" placeholder="请输入您的密码" id="password">
+					</div>
+				</div>
+				<div class="footer">
+					<div class="userChecked clearfix">
+						<span></span>
+						<span>下次自动登录</span>
+						<span>忘记密码</span>
+					</div>
+					<div class="logoinBtn">
+						<a onclick="toNext()" href="javascript:void(0)"  >登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$(".footer").children('.userChecked').children('span:first-child').click(function(){
+		$(this).toggleClass('active');
+	});
+	})
+	</script>
+</body>
+</html>

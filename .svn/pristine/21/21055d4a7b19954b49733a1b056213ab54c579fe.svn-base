@@ -1,0 +1,147 @@
+package com.anorng.bank.serviceImpl;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.alibaba.fastjson.JSON;
+import com.anorng.bank.core.config.Global;
+import com.anorng.bank.core.utils.Page;
+import com.anorng.bank.entity.Link;
+import com.anorng.bank.entity.LinkType;
+import com.anorng.bank.entity.SecurityCompany;
+import com.anorng.bank.entity.SecurityUser;
+import com.anorng.bank.service.SecurityService;
+
+@Service
+@Transactional
+public class SecurityServiceImpl implements SecurityService {
+	private final Logger log = LoggerFactory.getLogger(SecurityServiceImpl.class);
+	@PersistenceContext
+	private EntityManager em;
+
+	@Override
+	public Page<SecurityCompany> queryCompanyByPage(Integer p) {
+
+		// 数据的总条数
+		Long totalSize = (Long) em.createNamedQuery("querySecurityCompanyCount").getSingleResult();
+
+		TypedQuery<SecurityCompany> query = em.createNamedQuery("querySecurityCompany", SecurityCompany.class);
+		// 当前要查询的下标位置
+		Integer offset = (p - 1) * Global.pageSize;
+		query.setFirstResult(offset);
+		query.setMaxResults(Global.pageSize);
+		List<SecurityCompany> resultList = query.getResultList();
+
+		Page<SecurityCompany> page = new Page<>(p, Global.pageSize, totalSize.intValue());
+		page.setItems(resultList);
+		log.info("分页证券公司信息={}", JSON.toJSONString(page));
+		return page;
+	}
+
+	@Override
+	public Boolean disOrEnableSecurity(Long id, Boolean isEnable) {
+		SecurityCompany company = em.find(SecurityCompany.class, id);
+		if (company == null) {
+			return false;
+		}
+		company.setStatus(isEnable ? SecurityCompany.STATUS.UP : SecurityCompany.STATUS.DOWN);
+		em.persist(company);
+		return true;
+	}
+
+	@Override
+	public SecurityUser getSecurityUserById(Long id) {
+		return em.find(SecurityUser.class, id);
+	}
+
+	@Override
+	public List<Link> findLinksofCompanyByUserId(Long id) {
+		SecurityUser securityUser = em.find(SecurityUser.class, id);
+		TypedQuery<Link> query = em
+				.createQuery("SELECT l FROM Link l WHERE :sUser MEMBER OF l.securityCompany.securityUsers", Link.class);
+		query.setParameter("sUser", securityUser);
+		return query.getResultList();
+	}
+
+	@Override
+	public Link findLinkById(Long id) {
+		return em.find(Link.class, id);
+	}
+
+	@Override
+	public void delZX(Link link) {
+		em.remove(link);
+	}
+
+	@Override
+	public Boolean isZXRelatedToCompany(Long id) {
+		Query query = em.createQuery(
+				"SELECT COUNT(m) FROM Market m WHERE EXISTS (SELECT c FROM SecurityCompany c WHERE c.id=:cid AND m.link MEMBER OF c.links) ");
+		query.setParameter("cid", id);
+		Long count = (Long) query.getSingleResult();
+		return count > 0 ? true : false;
+	}
+
+	@Override
+	public Page<SecurityCompany> queryCompanyByLikeName(String name) {
+		TypedQuery<SecurityCompany> query = em.createNamedQuery("querySecurityCompanyByLikeName",
+				SecurityCompany.class);
+		query.setParameter("cname", "%" + name.trim() + "%");
+		List<SecurityCompany> resultList = query.getResultList();
+		Page<SecurityCompany> page = new Page<>(1, Global.pageSize, resultList.size());
+		page.setItems(resultList);
+		log.info("模糊查询证券公司信息={}", JSON.toJSONString(page));
+		return page;
+	}
+
+	@Override
+	public List<SecurityCompany> getCompanyNameAndIds() {
+		String sql = "SELECT new SecurityCompany(id,name) FROM SecurityCompany c WHERE c.status='UP' ";
+		TypedQuery<SecurityCompany> query = em.createQuery(sql, SecurityCompany.class);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Link> getAllLinkByCompanyId(Long id) {
+		String sql = "SELECT l FROM Link l WHERE l.securityCompany.id=:cid AND l.securityCompany.status = 'UP' ";
+		List<Link> list = em.createQuery(sql, Link.class).setParameter("cid", id).getResultList();
+		return list;
+	}
+
+	@Override
+	public void isEnableLink(Long id, Boolean isEnable) {
+		Link link = em.find(Link.class, id);
+		link.setStatus(isEnable ? Link.STATUS.ENABLE : Link.STATUS.DISABLE);
+		em.persist(link);
+	}
+
+	@Override
+	public List<LinkType> getAllNeedLinkType(Long id) {
+		String sql = "SELECT t FROM LinkType t WHERE NOT EXISTS (SELECT c FROM SecurityCompany c WHERE c.id=:cId AND EXISTS (SELECT l FROM Link l WHERE l MEMBER OF c.links AND l.linkType=t))";
+		List<LinkType> resultList = em.createQuery(sql, LinkType.class).setParameter("cId", id).getResultList();
+		return resultList;
+	}
+
+
+	@Override
+	public Boolean addLinkForCompany(Long typeId, Long companyId, String url) {
+		LinkType linkType = em.find(LinkType.class, typeId);
+		SecurityCompany company = em.find(SecurityCompany.class, companyId);
+		if (linkType == null || company == null) {
+			return false;
+		}
+		Link link = new Link(url, linkType, company, Link.STATUS.DISABLE);
+		em.persist(link);
+		return true;
+	}
+
+}
